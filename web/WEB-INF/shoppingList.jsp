@@ -13,10 +13,12 @@
     </head>
     <body>
         <h1>Shopping List</h1>
-        
-        <form action="ShoppingList">
-            Username:<input type="text" name ="username">
-            <input type="submit" value="Register name">
-        </form>
+        <p>Hello, ${username} <a href ="../register.jsp">Logout</a>
+
+                <h1>List</h1>
+                <form action="ShoppingList" method ="post">
+                    Add item <input type="text" name ="item">
+                    <input type="submit" value="Add">
+                </form>
     </body>
 </html>
