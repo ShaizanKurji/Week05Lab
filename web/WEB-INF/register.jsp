@@ -19,5 +19,6 @@
             <input type="submit" value="Register name">
         </form>
         ${logoutMessage}
+        ${invalidUsername}
     </body>
 </html>
