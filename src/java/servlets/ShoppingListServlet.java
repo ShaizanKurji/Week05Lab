@@ -6,7 +6,6 @@
 package servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Iterator;
 import javax.servlet.ServletException;
@@ -43,9 +42,9 @@ public class ShoppingListServlet extends HttpServlet {
         if (action != null) {
             if (action.equals("register")) {
                 String username = (String) request.getParameter("username");
-                if (username == null) {
+                if (username.equals("") || username == null) {
                     request.setAttribute("invalidUsername", "Ensure a username is inputed");
-                    getServletContext().getRequestDispatcher("/WEB-INF/regist.jsp").forward(request, response);
+                    getServletContext().getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
                     return;
                 }
                 ArrayList<String> itemList = new ArrayList<String>();
